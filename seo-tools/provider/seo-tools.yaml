@@ -1,0 +1,31 @@
+identity:
+  author: "dev"
+  name: "seo-tools"
+  label:
+    en_US: "5118 SEO Tools"
+    zh_Hans: "5118 SEO工具"
+  description:
+    en_US: "5118 SEO API integration"
+    zh_Hans: "集成5118 SEO API进行元数据生成"
+  icon: "icon.svg"
+
+credentials_for_provider:
+  apikey:
+    type: secret-input
+    required: true
+    label:
+      en_US: "5118 API Key"
+      zh_Hans: "5118 API密钥"
+    placeholder:
+      en_US: "Please input your 5118 API key"
+      zh_Hans: "请输入您的5118 API密钥"
+    help:
+      en_US: "Get your 5118 API key from 5118.com -> Account -> API Management"
+      zh_Hans: "从 5118.com -> 账户 -> API管理 获取您的API密钥"
+
+tools:
+  - tools/seo_meta.yaml
+
+extra:
+  python:
+    source: provider/seo-tools.py

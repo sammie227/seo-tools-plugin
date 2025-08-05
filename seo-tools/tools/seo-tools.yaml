@@ -1,0 +1,57 @@
+identity:
+  name: "seo_meta"
+  author: "dev"
+  label:
+    en_US: "SEO Meta Generator"
+    zh_Hans: "SEO元数据生成器"
+  description:
+    human:
+      en_US: "Generate SEO title, description and keywords using 5118 API"
+      zh_Hans: "使用5118 API生成SEO标题、描述和关键词"
+    llm: "A tool for generating SEO metadata including title, description and keywords using 5118 API"
+
+parameters:
+  - name: apikey
+    type: string
+    required: true
+    label:
+      en_US: "5118 API Key"
+      zh_Hans: "5118 API密钥"
+    human_description:
+      en_US: "Enter your 5118 API key from 5118.com -> Account -> API Management"
+      zh_Hans: "请输入您的5118 API密钥，从 5118.com -> 账户 -> API管理 获取"
+    llm_description: "5118 API key for authentication"
+    form: form
+
+  - name: keywords
+    type: string
+    required: true
+    label:
+      en_US: "Main Keywords"
+      zh_Hans: "主关键词"
+    human_description:
+      en_US: "Enter main keywords for SEO optimization"
+      zh_Hans: "请输入用于SEO优化的主关键词"
+    llm_description: "Main keywords for SEO optimization"
+    form: llm
+
+  - name: adverb
+    type: string
+    required: false
+    label:
+      en_US: "Secondary Keywords"
+      zh_Hans: "副关键词"
+    human_description:
+      en_US: "Enter secondary keywords (optional)"
+      zh_Hans: "请输入副关键词（可选）"
+    llm_description: "Secondary keywords to enhance SEO content"
+    form: llm
+
+outputs:
+  - name: text
+    type: string
+    label:
+      en_US: "SEO Content"
+      zh_Hans: "SEO内容"
+    description: "Generated SEO title, description and keywords"
+
